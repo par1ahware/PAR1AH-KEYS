@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PAR1AH KEYS Privacy Policy — draft</title><body><h1>PAR1AH KEYS Privacy Policy</h1><p>Draft pending final policy approval and hosting verification.</p><pre style="white-space:pre-wrap;font:inherit">PAR1AH KEYS — Privacy Policy (development candidate)
+PAR1AHWARE — a product of PAR1AH DYNAM1CS.
+Effective: 25 October 2026. Public release/legal approval pending.
+
+Typed text and the receiving app
+The keyboard sends text you type to the app you are editing through Android&#x27;s InputConnection. PAR1AH KEYS does not keep typing history, passwords or keystroke logs. The receiving app has its own privacy practices.
+
+Translation engines and network use
+The intended release engine is Google ML Kit on-device Translation, using Google Translate models for English and Spanish. Text is processed on device according to Google&#x27;s documentation; this app does not call a cloud text-translation endpoint. Model downloads require your explicit choice and Wi-Fi. Translation and replacement are separate deliberate actions, and a changed field/selection invalidates replacement. No text is automatically selected or translated in the background.
+
+The Google SDK is not a promise of zero network activity. ML Kit documents collection of device/app information, installation/device identifiers as applicable, performance metrics, input/output sizes, source/destination languages, API configuration, event types and error codes for diagnostics/usage analytics. It uses Firebase components for remote configuration/installation diagnostics. Google documents HTTPS transport and no third-party sharing for that SDK data. The ML Kit build requests INTERNET and ACCESS_NETWORK_STATE in addition to microphone access. We defer the ML Kit initializer and initialize it only after an explicit model/translation action; the resolved SDK and merged manifest must still pass release review. No Google Analytics or advertising product is intentionally integrated, but ML Kit&#x27;s own diagnostics must be disclosed.
+
+A separately labeled internal platform-diagnostic build uses Android&#x27;s configured on-device translation provider instead of ML Kit. That build has no bundled Google translation SDK/model downloader and requests no Internet permission in its own manifest. Availability varies by provider/Android version; it does not establish ML Kit compatibility. About and the translation panel identify the engine. Provider behavior must be qualified on each supported path.
+
+Google information: https://developers.google.com/ml-kit/android-data-disclosure
+Translation usage/attribution: https://developers.google.com/ml-kit/language/translation/translation-terms
+Google privacy information: https://policies.google.com/privacy
+Do not submit passwords or secrets. Sensitive/password fields disable translation. Machine translations may be inaccurate; review before replacing text.
+
+Voice
+RECORD_AUDIO is requested after a deliberate microphone action. Android&#x27;s on-device SpeechRecognizer is requested; PAR1AH KEYS has no remote speech fallback and saves no audio/transcript files. Partial speech is in unsaved UI until final insertion or cancellation. The installed Android/OEM speech provider processes audio under its own permissions/policy. A successful Samsung test does not establish every provider&#x27;s internals or offline behavior. Permission approval alone never starts recording; return and tap Mic again. Password/private/numeric contexts disable voice.
+
+Clipboard and personal information
+Paste reads the current plain-text clipboard only when tapped. No clipboard listener or history is maintained, and content URIs are not resolved. The receiving editor and Android clipboard policies remain in control. The app has no account, advertising, contact access or app-server text upload.
+
+Stored information and deletion
+Appearance/feedback settings, deliberately authored text shortcuts and setup progress are stored in private preferences. Imported photos are private resized copies without retained source URI/EXIF metadata. Gallery originals are not changed. Drafts are temporary until Apply. Setup/test editor text and selected/translated text are not saved by this app. Downloaded ML Kit language models and provider diagnostics may use SDK-managed app storage. Backup is disabled.
+
+Cancel stops pending voice/translation and prevents late editor insertion. An explicitly requested model download may complete independently after closing its UI. Discard restores an unapplied draft. Restore defaults resets settings when applied; it does not revoke permissions or guarantee deletion of all orphan private image/model files. Android App info → Storage → Clear storage deletes app-private data/settings/models: use it only for an intentional full reset. Uninstall also removes data and must not be used as an upgrade workaround. Android App info → Permissions controls microphone access.
+
+Diagnostics and support
+Developer builds may emit lifecycle, geometry, theme state and speech-locale metadata to Android logs. PAR1AH logging does not deliberately include typed text, transcripts, audio, selected translation text, clipboard contents or photo URIs. ML Kit diagnostics are a separate disclosed SDK flow. No automatic crash-reporting service is intentionally added by PAR1AH. Development test screenshots are not app telemetry and must not be published with private text/photos.
+
+Support email: par1ah.dynam1cs@gmail.com
+Bug reports: https://github.com/par1ahware/PAR1AH-KEYS/issues
+The owner has approved the support email above until further notice. A public hosted privacy URL and final Data Safety declarations require owner approval based on the exact compiled SDK/provider build. No store submission or legal approval is represented by this draft.
+</pre></body></html>
